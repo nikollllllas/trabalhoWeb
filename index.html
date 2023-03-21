@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho - Web</title>
+    
+    <style>
+        body {
+            background-color: bisque;
+            width: 60vw;
+            margin: auto;
+        }
+        div { 
+            padding: 30px;
+            margin: 30px;
+            
+            border-radius: 15px;
+            background-color: rgb(255, 228, 176);
+            border: 1px solid rgba(141, 141, 141, 0.25);
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.150);
+        }
+        section {
+            padding-bottom: 25px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        p, pre {
+            font-size: 1.5em;
+        }
+        a {
+            text-decoration: none;
+            color: red;
+        
+        }
+        .error {
+            text-decoration-style: wavy;
+            text-decoration-color: red;
+        }
+    </style>
+
+    <script>
+        function showContent() {
+            var template = document.getElementsByTagName("template")[0];
+            var clone = template.content.cloneNode(true);
+            document.body.appendChild(clone);
+        }
+    </script>
+</head>
+<body>
+    <!-- Basic HTML + Meta Info + Formatting -->
+    <div>
+        <section>
+            <h1>Basic HTML</h1>
+                <hr>
+                <h2>Doctype</h2>
+                    <p>A tag <code>&lt;!DOCTYPE&gt;</code> mostra qual o tipo do documento.</p>
+                <h2>HTML</h2>
+                    <p>A tag <code>&lt;html&gt;</code> é a tag raiz de um documento HTML. É um container para todos as outras tags (menos a <code>&lt;DOCTYPE&gt;</code>). É nela que é definida a linguagem nativa do documento com o atributo "lang="linguagem"".</p>
+                <h2>Head</h2>
+                    <p> A tag <code>&lt;head&gt;</code> funciona como um container para os metadados e informações sobre o documento, está presente entre as tags <code>&lt;html&gt;</code> e <code>&lt;body&gt;</code>. É onde se localiza também o título do documento (title), a tag link com valores de ícone do documento (favicon), estilo em cascata (css), scripts (javascript),  etc. </p>
+                <h2>Title</h2>
+                    <p> A tag <code>&lt;title&gt;</code> contém o título do documento, apresentado na aba junto ao favicon. No presente documento, o título é "Trabalho - Web".</p>
+                <h2>Body</h2>
+                    <p>A tag <code>&lt;body&gt;</code> é o corpo do documento. Onde se encontra todo o conteúdo que será apresentado na tela. Só pode existir um <code>&lt;body&gt;</code> no documento.</p>
+                <h2>H1...H6</h2>
+                    <p>As tags <code>&lt;h1&gt;</code> ... <code>&lt;h6&gt;</code> em suma são elementos de cabeçalho e definem o tópico da seção em que ele é apresentado. São divididos de H1 até H6, sendo H1 o mais relevante até H6 o de menor relevância. Aceita o atributo <code>style</code> dentro da tag de abertura para estilização.</p>
+                    <p>Exemplos: <br>
+                        <h1>H1</h1>
+                        <h2>H2</h2>
+                        <h3>H3</h3>
+                        <h4>H4</h4>
+                        <h5>H5</h5>
+                        <h6>H6</h6>
+                    </p>
+                <h2>P</h2>
+                    <p>A tag <code>&lt;p&gt;</code> define um parágrafo, onde um texto é inserido na tela. Também aceita o atributo <code>style</code> dentro da tag de abertura para estilização.</p>
+                    <p>Exemplo:
+                        <p>Este é um parágrafo.</p>
+                        <p>E este outro parágrafo.</p>
+                    </p>
+                <h2>BR</h2>
+                    <p>A tag <code>&lt;br&gt;</code> insere uma quebra de linha (break = quebra | linha = row). Não necessita de fechamento. Pode ser utilizada para escrever poemas. Assim como <br> estas quebras de linha <br>
+                    feitas aqui.</p>
+                    <p>Exemplo: <br>
+                        Aqui embaixo existe uma quebra de linha. <br>
+                        Aqui embaixo tem duas! <br><br>
+                        Pulou uma linha!
+                    </p>
+                <h2>HR</h2>
+                    <p>A tag <code>&lt;hr&gt;</code> cria uma linha horizontal (horizontal = horizontal | row = linha) na tela para separar conteúdos. Não necessita de fechamento e aceita o atributo <code>style</code> dentro da tag para estilização.</p>
+                    <p>Exemplo:
+                        <hr>
+                        Uma horizontal line acima e uma abaixo!
+                        <hr>
+                    </p>
+                <h2>Comentário</h2>
+                    <p>A tag <code>&lt;!--...--&gt;</code> é utilizada para "esconder" do navegador o código que estiver dentro dela. <!-- Assim como aqui.--> </p>
+        </section>
+        <section>
+            <h1>Meta Info</h1>
+                <hr>
+                <h2>Head</h2>
+                    <p> A tag <code>&lt;head&gt;</code> funciona como um container para os metadados e informações sobre o documento, está presente entre as tags <code>&lt;html&gt;</code> e <code>&lt;body&gt;</code>. É onde se localiza também o título do documento (title), a tag link com valores de ícone do documento (favicon), estilo em cascata (css), scripts (javascript),  etc. </p>
+                <h2>Meta</h2>
+                    <p>A tag <code>&lt;meta&gt;</code> define os metadados sobre a página. As tags <code>&lt;meta&gt;</code> são alocadas dentro do <code>&lt;head&gt;</code> e são utilizadas para especificar qual grupo de caracteres será aceito na página, descrição da página, autor e configurações de exibição da tela. Aceita os seguintes atributos: charset, content, http-equiv e name.</p>
+                <h2>Base</h2>
+                    <p>A tag <code>&lt;base&gt;</code> define qual a URL base para todos os links relacionados no documento. A tag <code>&lt;base&gt;</code> precisa conter o atributo "href", que irá indicar qual o endereço base para todos os links de redirecionamento presentes na página.</p>
+                <h2>Basefont</h2>
+                    <p>A tag <code>&lt;basefont&gt;</code> era utilizada no HTML4 para especificar cor da fonte, tamanho da fonte ou família da fonte. Hoje em dia é uma tag descontinuada (deprecated), pois, para a mesma função, usa-se as folhas de estilo (CSS).</p>
+        </section>
+        <section>
+            <h1>Formatting</h1>
+                <hr>
+                <h2>Acronym</h2>
+                    <p>A tag <code>&lt;acronym&gt;</code> foi descontinuada (deprecated). Era utilizada para sinalizar o significado de abreviações. Hoje em dia, utiliza-se a tag <code>&lt;abbr&gt;.</code></p>
+                <h2>Abbr</h2>
+                    <p>A tag <code>&lt;abbr&gt;</code> é utilizada para definir acrônimos como "<abbr title="HyperText Markup Language">HTML</abbr>", "<abbr title="Cascading Style Sheets">CSS</abbr>", "<abbr title="Doutor">Dr.</abbr>", etc. As palavras envelopados com a tag <code>&lt;abbr&gt;</code> apresentam pontinhos abaixo delas. Ao repousar o mouse sob a palavra, o signifidado será apresentado. O atributo "title" é o responsável por apresentar o significado.</p>
+                <h2>Address</h2>
+                    <p>A tag <code>&lt;address&gt;</code> define as informações de contato do autor/dono do documento/artigo. Nela pode conter endereço de e-mail, endereço físico, URL, número de telefone, redes sociais, etc. </p>
+                    <p>Exemplos: <br>
+                        <address>
+                        Praça Mascarenhas de Moraes <br>
+                        Site: <a href="https://www.youtube.com/watch?v=D-UmfqFjpl0" target="_blank">wisdom.dog</a>
+                        </address>
+                    </p>
+                <h2>B</h2>
+                    <p>A tag <code>&lt;b&gt;</code> é utilizada apenas em último caso, segundo o site <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/b#:~:text=O%20elemento%20%3Cb%3E%20n%C3%A3o%20transmite%20essa%20informa%C3%A7%C3%A3o%20sem%C3%A2ntica%20especial.%20Voc%C3%AA%20deve%20us%C3%A1%2Dlo%20apenas%20quando%20os%20outros%20elementos%20citados%20n%C3%A3o%20se%20encaixam%20na%20situa%C3%A7%C3%A3o." target="_blank">MDN Web Docs</a>, o elemento <code>&lt;b&gt;</code> não transmite semântica alguma, ou seja, só serve para deixar o texto em negrito.</p>
+                    <p>Exemplo: <br>
+                        Uma palavra que precise de <b>destaque</b>!                        
+                    </p>
+                <h2>BDI</h2>
+                    <p>A tag <code>&lt;bdi&gt;</code> é utilizada quando é necessário isolar uma parte do texto que é formatada de uma forma diferente de todo o resto. Dessa forma, entra em cena o isolamento bidirecional. Por exemplo: um árabe insere seu nome em seu idioma nativo, mas todo o resto do texto está formatado "normalmente" para nós do ocidente. A tag <code>&lt;bdi&gt;</code> faz com que a escrita árabe se comporte como estamos acostumados: escrita da esquerda para a direita. É útil quando o usuário está livre para inserir qualquer tipo de caractere. Não é suportada pelo Safari.</p>
+                    <p>Exemplo:
+                        O usuário <bdi>إيان</bdi> fez 3 pontos.
+                    </p>
+                <h2>BDO</h2>
+                    <p>A tag <code>&lt;bdo&gt;</code> é utilizada para inverter o texto completamente. Carrega consigo o atributo "dir", que aceita "<abbr title="Right to Left">rtl</abbr>" e "<abbr title="Left to Right">ltr</abbr>" o (padrão).<br></p>
+                    <p>Exemplo: <br>
+                        <bdo dir="rtl">Ao contrário.</bdo>
+                    </p>
+                <h2>big</h2>
+                    <p>A tag <code>&lt;big&gt;</code> era utilizada no HTML4 para aumentar o tamanho do texto que envelopava. Hoje em dia é uma tag descontinuada (deprecated), pois, para a mesma função, usa-se as folhas de estilo (CSS), mais especificamente, o atributo "font-size".</p>
+                <h2>Blockquote</h2>
+                    <p>A tag <code>&lt;blockquote&gt;</code> especifíca uma citação de outra fonte. Por padrão, o navegador aplica a identação na citação. A tag aceita o atributo "cite", que recebe a url da fonte citada.</p>
+                    <p>Exemplo: <br>
+                        <blockquote>
+                            Uma citação de algum livro muito interessante e logo, como um clássico ou algum artigo científico. Geralmente bem longa, assim como estamos aprendendo com a Ezilda em Metodologia da Pesquisa às quartas-feiras.
+                        </blockquote>
+                    </p>
+                <h2>Center</h2>
+                    <p>A tag <code>&lt;center&gt;</code> não é mais utilizada no HTML5. Hoje, para centralização de elementos, utilizamos as folhas de estilo (CSS). O atributo utilizado é o "text-align: center".</p>
+                <h2>Cite</h2>
+                    <p>A tag <code>&lt;cite&gt;</code> define o título de um trabalho criativo, seja ele uma música, livro, poema, pintura, etc. O texto envelopado com a tag é renderizado na tela em itálico.</p>
+                    <p>Exemplo: <br>
+                        <cite>Don't Stay - Linkin Park</cite> <br>
+                        <cite>Master of Puppets (Remastered) - Metallica</cite>
+                    </p>
+                <h2>Code</h2>
+                    <p>A tag <code>&lt;code&gt;</code> está sendo utilizada em todos os momentos em que tags são citadas neste documento. O texto envelopado com a tag é renderizado com uma fonte monoespaçada.</p>
+                <h2>Del</h2>
+                    <p>A tag <code>&lt;del&gt;</code> define que um texto foi deletado do documento. Os navegadores irão renderizar o texto envelopado com um risco de ponta a ponta.</p>
+                    <p>Exemplo: <br>
+                        Aqui <del>nesse texto taxado</del>.
+                    </p>
+                <h2>DFN</h2>
+                    <p>A tag <code>&lt;dfn&gt;</code> é utilizada para indicar um termo que será definido posteriormente. A tag pode utilizar o atributo "title" ou melhor, a tag "abbr" usando o atributo "title".</p>
+                    <p>Exemplo: <br>
+                        Neste documento foi utilizado o <dfn>HTML</dfn>, o <dfn>CSS</dfn> e um pouco de <dfn>JS</dfn>.
+                    </p>
+                <h2>Em</h2>
+                    <p>A tag <code>&lt;em&gt;</code> está ligada a textos que necessitam de ênfase. O conteúdo envelopado é apresentado em itálico. Um leitor de tela lê com ênfase, modificando verbalmente a pronúncia.</p>
+                    <p>Exemplo: <br>
+                        Texto com <em>ênfase</em>.
+                    </p>
+                <h2>Font</h2>
+                    <p>A tag <code>&lt;font&gt;</code> foi descontinuada. Era utilizada para especificar a cor, família, tamanho, etc. Hoje em dia é utilizado o CSS para estilização.</p>
+                <h2>i</h2>
+                    <p>A tag <code>&lt;i&gt;</code> define o texto envelopado como uma voz alternada e é renderizado em itálico. Geralmente utilizado para termos técnicos ou frases em outras línguas, um pensamento/idéia, nome de um navio, etc. A tag é utlizada quando não há nenhuma tag semântica mais apropriada como: "em", "strong", "mark", "cite" e "dfn".</p>
+                    <p>Exemplo: <br>
+                        Navio: <i>MSC SeaShore</i>
+                    </p>
+                <h2>Ins</h2>
+                    <p>A tag <code>&lt;ins&gt;</code> define que o texto envelopado foi inserido no documento (contrário da tag <code>&lt;del&gt;</code>, que define que um texto foi retirado do documento). É renderizado de forma sublinhada. Aceita os atributos "cite", indicando qual a razão do texto ser inserido/editado, e o atributo "datetime", que especifica a data que o texto foi inserido/editado.</p>
+                    <p>Exemplo: <br>
+                        Leis <del>LGPD</del> <ins cite="Novo termo!">LGBT</ins>
+                    </p>
+                <h2>KBD</h2>
+                    <p>A tag <code>&lt;kbd&gt;</code> é usada quando for definida o uso do teclado para entrada. Assim como a tag <code>&lt;code&gt;</code>, todo o texto envelopado é renderizado como monoespaçado.</p>
+                    <p>Exemplo: <br>
+                        Para copiar algo, selecione o texto desejado e utilize <kbd>Ctrl + C</kbd>.
+                    </p>
+                <h2>Mark</h2>
+                    <p>A tag <code>&lt;mark&gt;</code> define o texto envelopado como importante. Assim como um marca-texto, define o fundo do texto envelopado como amarelo, podendo ser definidas outras cores com o CSS.</p>
+                    <p>Exemplo: <br>
+                        <mark>Texto marcado!</mark>
+                    </p>
+                <h2>Meter</h2>
+                    <p>A tag <code>&lt;meter&gt;</code> é utilizada para mostrar como uma escala um valor entre um intervalo conhecido ou valor fracionado. Aceita os atributos: </p>
+                    <ul>
+                        <li>Value: valor númerico atual.</li>
+                        <li>Min: valor mínimo.</li>
+                        <li>Max: como valor máximo.</li>
+                        <li>Low: por padrão é igual o valor de "min", é o limite numérico máximo da parte inferior do intervalo medido deve ser menor que o atributo "high".</li>
+                        <li>High: por padrão é igual o valor de "max" e deve ser maior que o atributo "min" e menor que o atributo "max".</li>
+                        <li>Optimum: o valor numérico ótimo. Deve estar entre os atributos "min" e "max". Quando utilizado com os atributos low e high, indidca a região que é preferível.</li>
+                        <li>Form: esse atributo associa o meter à um form, que pode estar recebendo valores numéricos e o meter apresentando o valor correspondente ao que recebeu no input. O atributo pode ser omitido caso o elemento meter seja descendente de um form.</li>
+                    </ul>
+                    <p>Exemplo de um meter com os atributos setados para: <br>
+                        Low: 60; <br>
+                        High 80; <br>
+                        Max: 100; <br>
+                        Optimum: 70; <br>
+                        e Value: 75; <br>
+                        
+                        <meter low="60" high="80" max="100" optimum="70" value="75">.</meter>
+                    </p>
+                <h2>Pre</h2>
+                    <p>A tag <code>&lt;pre&gt;</code> é como uma tag <code>&lt;p&gt;</code>, porém, que respeita os espaços e quebras de linha da forma que são inseridos.</p>
+                    <p>Exemplo:
+                        <pre>
+                            1
+                                2
+                                    3
+
+                                            5
+                                *   
+            7
+                        </pre>
+                    </p>
+                <h2>Progress</h2>
+                    <p>A tag <code>&lt;progress&gt;</code> é utilizada para mostrar o progesso de uma tarefa. Bastante utilizada junto ao javascript para mostrar quanto uma tarefa já está pronta. Aceita os atributos:</p>
+                    <ul>
+                        <li>Value: valor númerico atual, a quantidade que foi completa até o momento.</li>
+                        <li>Max: como valor máximo, o valor total que a tarefa deve atingir para ser completa. O padrão é "1".</li>
+                    </ul>
+                    <p>Exemplo: <br>
+                        <label for="nothing">Sem atributos: </label>
+                        <progress id="nothing">.</progress>
+                        <br>
+                        <label for="fifty">50% Completa:: </label>
+                        <progress id="fifty" value="50" max="100">.</progress>
+                    </p>
+                <h2>Q</h2>
+                    <p>A tag <code>&lt;q&gt;</code> representa uma citação breve, na própria linha.</p>
+                    <p>Exemplo: <br> 
+                        E em um dia chuvoso de quinta-feira, Carlos Marques nos olhou profundamente, suspirou e disse: <q>TVN.</q>.
+                    </p>
+                <h2>RP e RT</h2>
+                    <p>A tag <code>&lt;rp&gt;</code> e a tag <code>&lt;rt&gt;</code> são utilizadas junto a tag <code>&lt;ruby&gt;</code>. A tag <code>&lt;rp&gt;</code> é responsável por prover parêntesis para um texto ruby, que assim irá conseguir renderizar para browsers que não tem suporte à notação do ruby. Já a tag <code>&lt;rt&gt;</code> é responsável por definir a explicação ou pronúncia de caracteres na notação do ruby.</p>
+                    <p>Exemplo: <br>
+                        <ruby>
+                            漢 <rt> ㄏㄢˋ </rt>
+                        </ruby>
+                    </p>
+                <h2>Ruby</h2>
+                    <p>A tag <code>&lt;ruby&gt;</code> especifíca que uma anotação ruby irá aparecer. É uma anotação de pequenos textos extras que ficam juntos com o texto principal indicando a pronúncia ou significado dos caracteres correspondentes. Esse tipo de anotação é muito utilizada em publicações japonesas.</p>
+                <h2>S</h2>
+                    <p>A tag <code>&lt;s&gt;</code> quer dizer que o texto não está mais correto, relevante. O texto é renderizado com um risco horizontal do começo ao fim das palavras envelopadas com a tag. <strong>Não</strong> deve ser utilizado para definir textos deletados em um documento.</p>
+                    <p>Exemplo: <br>
+                        <pre>
+                            <s>Queria estar em casa.</s>
+                            Que legal estar aqui!
+                        </pre>
+                    </p>
+                <h2>Samp</h2>
+                    <p>A tag <code>&lt;samp&gt;</code> é utilizada quando o objetivo é mostrar que o texto foi emitido pelo computador ou por um software do mesmo.</p>
+                    <p>Exemplo: <br>
+                        <samp>
+                            Error $%?! <br>
+                            Press F16 to continue.
+                        </samp>
+                    </p>    
+                <h2>Small</h2>
+                    <p>A tag <code>&lt;small&gt;</code> define que o texto envelopado será menor. Utilizado para mostrar direitos autorais e outros comentários secundários.</p>
+                    <p>Exemplo: <br>
+                        Documento desenvolvido em dupla! <br>
+                        <small>sozinho.</small>
+                    </p>
+                <h2>Strike</h2>
+                    <p>A tag <code>&lt;strike&gt;</code>  era utilizada no HTML4 para renderizar o texto envelopado com um risco horizontal (assim como <code>&lt;del&gt;</code> e <code>&lt;s&gt;</code> mas sem semântica alguma). Hoje em dia é uma tag descontinuada (deprecated), pois, como anteriormente, usa-se as tags <code>&lt;del&gt;</code> e <code>&lt;s&gt;</code></p>
+                <h2>Strong</h2>
+                    <p>A tag <code>&lt;strong&gt;</code> define a importância do texto envelopado. O texto é renderizado em negrito assim como na tag <code>&lt;b&gt;</code>.</p>
+                    <p>Exemplo: <br>
+                        <strong>Importante!</strong>
+                    </p>
+                <h2>Sub</h2>
+                    <p>A tag <code>&lt;sub&gt;</code> define textos subscritos. Aparecem meio caractere abaixo da linha padrão e pode ser renderizado em uma fonte menor.</p>
+                    <p>Exemplo: <br>
+                        Água: H<sub>2</sub>O <br>
+                        Açúcar (Sacarose): C<sub>12</sub>H<sub>24</sub>O<sub>12</sub> <br>
+                        Açúcar em Cubos (Sacarose): (C<sub>12</sub>H<sub>24</sub>O<sub>12</sub>)<sup>3</sup> 
+                    </p>
+                <h2>Sup</h2>
+                    <p>A tag <code>&lt;sup&gt;</code> define textos sobrescrito. Ao contrário do subscrito, ele fica meio caractere acima da linha superior padrão e pode ser renderizado em uma fonte menor. Geralmente é utilizado em notas de rodapé.</p>
+                    <p>Exemplos:<br>
+                        2x<sup>2</sup> + 8y - 19a = 0 <br>
+                        5<sup>5</sup> = 3125
+                    </p>
+                <h2>Template</h2>
+                    <p>A tag <code>&lt;template&gt;</code> é utilizada como um container para esconder algum conteúdo HTML do cliente enquanto a página carrega. O que está dentro desse container pode ser renderizado posteriormente com javascript. O seu principal uso é: caso tenha algum conteúdo HTML que será repetido várias vezes, mas não antes de alguém pedir por isso.</p>
+                    <p>Exemplo: <br>
+                        <button onclick="showContent()">Clique aqui para ver algo fascinante no fim do documento!</button>
+                        <template>
+                            <h2>Carlos Marques</h2>
+                            <img src="./assets/cmarques.png" width="642" height="612">
+                        </template>
+                    </p>
+                <h2>Time</h2>
+                    <p>A tag <code>&lt;time&gt;</code> é utilizada para definir um horário específico. O atributo datetime é um elemento utilizado para converter a hora em um formato que o navegador consegue interpretar, melhorando os mecanismos de pesquisa, gerando resultados de busca mais inteligentes. Não há nenhuma mudança visual.</p>
+                    <p>Exemplo: <br>
+                        Às <time>19:00</time> começam as aulas. <br>
+                        Quando chegar o <time  datetime="2023-12-25 00:01">natal</time>, ficarei muito feliz.
+                    </p>
+                <h2>TT</h2>
+                    <p>A tag <code>&lt;tt&gt;</code> foi descontinuada, ou seja, é considerada <i>deprecated</i>, no lugar dela usamos <code>&lt;kbd&gt;</code> para referenciar que um texto foi inserido via teclado, <code>&lt;var&gt;</code> para referenciar variáveis, <code>&lt;code&gt;</code> para linhas de código e <code>&lt;samp&gt;</code> para mostrar o texto emitido pelo computador.</p>
+                <h2>U</h2>
+                    <p>A tag <code>&lt;u&gt;</code> representa que o texto é desarticulado e estilizado diferente do texto normal, com erros ortográficos. O conteúdo envelopado é renderizado com underlines.</p>
+                    <p>Exemplo: <br>
+                        Quando uma palavra está errada, geralmente apresenta um underline com cor <u class="error">vermehla</u>.
+                    </p>
+                <h2>Var</h2>
+                    <p>A tag <code>&lt;var&gt;</code> é utilizada para definir uma variável em programação ou em uma expressão matemática. O texto envelopado é renderizado em itálico.</p>
+                    <p>Exemplos: <br>
+                        A área de um triângulo é 1/2 * <var>b</var> * <var>h</var>. <br>
+                        <var>i</var> = 0; <br>
+                        let <var>fruits</var> = [ ]
+
+                    </p>
+                <h2>WBR</h2>
+                    <p>A tag <code>&lt;wbr&gt;</code> significa <i>Word Break Opportunity</i>, em tradução livre, Oportunidade de Quebra de Linha, é utilizada quando o objetivo é fazer uma quebra de linha em um ponto específico, pois, às vezes o navegador faz quebras de linha em pontos errados.</p>
+                    <p>Exemplo: <br>
+                        Em um texto muitomuitomuitomuitomuito<wbr>muitomuitomuitomuitomuitomuitomuito<wbr>muitomuitomuito grandes, podemos fazer querbas de linha pontuais com a tag <code>&lt;wbr&gt;</code>.
+                    </p>
+            <hr>
+        </section>
+    </div> 
+</body>
+</html>
